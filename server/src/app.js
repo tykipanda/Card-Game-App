@@ -1,0 +1,9 @@
+require ('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const cardRoutes = require('./routes/cards');
+const scryfallRoutes = require('./routes/scryfall');
+
+const app = express();
+const PORT = process.env.PORT || 4000;
+
