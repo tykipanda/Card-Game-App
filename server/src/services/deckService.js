@@ -23,4 +23,9 @@ const deckService = {
         return data;
     }
 
+    async addToPile(deckId, pileName, cards) {
+        const { data } = await axios.get(`${BASE_URL}/${deckId}/pile/${pileName}/add/?cards=${cards}`);
+        return data;
+    },
+
     
