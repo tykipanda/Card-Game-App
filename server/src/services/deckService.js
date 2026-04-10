@@ -13,4 +13,8 @@ const deckService = {
         return data;
     },
 
-    
+    async shuffleDeck(deckId) {
+        const { data } = await axios.get(`${BASE_URL}/${deckId}/shuffle/`);
+        return data;
+    },
+
