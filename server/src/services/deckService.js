@@ -21,11 +21,18 @@ const deckService = {
     async createPartialDeck(cards) {
         const { data } = await axios.get(`${BASE_URL}/new/shuffle/?cards=${cards}`);
         return data;
-    }
+    },
 
     async addToPile(deckId, pileName, cards) {
         const { data } = await axios.get(`${BASE_URL}/${deckId}/pile/${pileName}/add/?cards=${cards}`);
         return data;
     },
 
-    
+    async listPile(deckId, pileName) {
+        const { data } = await axios.get(`${BASE_URL}/${deckId}/pile/${pileName}/list/`);
+        return data;
+    },
+
+};
+
+    module.exports = deckService;
