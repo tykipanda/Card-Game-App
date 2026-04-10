@@ -18,3 +18,9 @@ const deckService = {
         return data;
     },
 
+    async createPartialDeck(cards) {
+        const { data } = await axios.get(`${BASE_URL}/new/shuffle/?cards=${cards}`);
+        return data;
+    }
+
+    
