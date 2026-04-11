@@ -13,4 +13,15 @@ const cardController = {
         } catch (error) {next(error); }
     },
 
-    
+
+    async draw(req, res, next) {
+        try {
+            const { deckId, count =1 } = req.body;
+            if (!deckId) {return res.status(400).json({ error: 'Se requiere deckId' });
+            const result = await deckService.drawCards(deckId, count);
+            res.json({ success: true, cards: result.cards, remaining: result.remaining });
+        } catch (error) {next(error); }
+    }}
+
+
+};
