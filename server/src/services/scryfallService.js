@@ -53,3 +53,14 @@ const scryfallService = {
         const { data } = await scryfallCLient.get(`/cards/${setCode}/${collectorNumber}`);
         return data;
     }, 
+
+    // Autocompletar nombres de cartas
+    async autocomplete(query) {
+        await delay (100);
+        const { data } = await scryfallCLient.get('/cards/autocomplete', {
+            params: { q: query }
+        });
+        return data;
+    },
+
+    
