@@ -40,4 +40,11 @@ const scryfallService = {
         return data;
     },
 
+    // Obtener carta por ID de Scryfall
+    async getCardById(id) {
+        await delay (100);
+        const { data } = await scryfallCLient.get(`/cards/${id}`);
+        return data;
+    },
+
     
