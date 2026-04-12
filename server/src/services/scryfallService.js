@@ -14,4 +14,14 @@ const scryfallCLient = axios.create({
 // Delay para evitar rate limits(100ms entre peticiones)
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const scryfallService = 
+const scryfallService = {
+    // Busca cartas por texto (fulltext search)
+    async searchCards(query, page = 1) {
+        await delay (100);
+        const { data } = await scryfallCLient.get('/cards/search', {
+            params: { q: query, page }
+        });
+        return data;
+    },
+
+ 
