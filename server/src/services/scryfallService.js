@@ -32,4 +32,12 @@ const scryfallService = {
         return data;
     },
 
+    // Obtener carta aleatoria
+    async getRandomCard(query = null) {
+        await delay (100);
+        const params = query ? { q: query } : {};
+        const { data } = await scryfallCLient.get('/cards/random', { params });
+        return data;
+    },
+
     
