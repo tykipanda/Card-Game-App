@@ -24,4 +24,12 @@ const scryfallService = {
         return data;
     },
 
- 
+    // Buscar carta  por nombre exacto
+    async getCardByName(name, fuzzy = false) {
+        await delay (100);
+        const params = fuzzy ? { fuzzy: name } : { exact: name };
+        const { data } = await scryfallCLient.get('/cards/named', { params });
+        return data;
+    },
+
+    
