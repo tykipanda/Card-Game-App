@@ -74,7 +74,16 @@ const scryfallService = {
         await delay (100);
         const { data } = await scryfallCLient.get(`/sets/${code}`);
         return data;
-    }, 
+    },
 
-    
+    // Obtener simbolos de mana
+    async getSymbology() {
+        await delay (100);
+        const { data } = await scryfallCLient.get('/symbology');
+        return data;
+    }
+};
+
+module.exports = scryfallService;
+
 
