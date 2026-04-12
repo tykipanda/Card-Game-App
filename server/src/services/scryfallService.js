@@ -69,5 +69,12 @@ const scryfallService = {
         return data;
     },
 
+    // Obtener un set especifico
+    async getSet(code) {
+        await delay (100);
+        const { data } = await scryfallCLient.get(`/sets/${code}`);
+        return data;
+    }, 
+
     
 
