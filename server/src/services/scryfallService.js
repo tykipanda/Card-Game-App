@@ -57,10 +57,17 @@ const scryfallService = {
     // Autocompletar nombres de cartas
     async autocomplete(query) {
         await delay (100);
-        const { data } = await scryfallCLient.get('/cards/autocomplete', {
-            params: { q: query }
+        const { data } = await scryfallCLient.get('/cards/autocomplete', { params: { q: query }
         });
         return data;
     },
 
+    // Obtener todos los sets
+    async getSets() {
+        await delay (100);
+        const { data } = await scryfallCLient.get('/sets');
+        return data;
+    },
+
     
+
