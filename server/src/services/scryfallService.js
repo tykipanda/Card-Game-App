@@ -47,4 +47,9 @@ const scryfallService = {
         return data;
     },
 
-    
+    // Obtener carta por set y número de coleccionista
+    async getCardBySet(setCode, collectorNumber) {
+        await delay (100);
+        const { data } = await scryfallCLient.get(`/cards/${setCode}/${collectorNumber}`);
+        return data;
+    }, 
