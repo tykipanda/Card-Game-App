@@ -11,3 +11,7 @@ const scryfallCLient = axios.create({
     }
 });
 
+// Delay para evitar rate limits(100ms entre peticiones)
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+const scryfallService = 
