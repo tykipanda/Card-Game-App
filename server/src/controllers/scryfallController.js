@@ -38,6 +38,21 @@ const scryfallController = {
     }
     },
 
-    //
+    //GET /api/scryfall/name?name=...&fuzzy=true
+    async getByName(req, res, next) {
+        try {
+            const { name, fuzzy } = req.query;
+            if (!name) return res.status(400).json({error: 'Se requiere parámetro name'});
+            const card = await scryfallService.getCardById(name, fuzzy === 'true');
+            res.json({ success: true, card });
+        } catch (error) {
+            if (error.response?.status === 404) {
+                return res.status (404).json({ error: 'Carta no encontrada'});
+            }
+            next(error);
+        }
+    },
+
+    //GET /api
 
 }
