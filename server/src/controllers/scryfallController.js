@@ -1,7 +1,7 @@
 const scryfallService = require('../services/scryfallService');
 
 const scryfallController = {
-    //Ger api/scryfall/search?q=...&page=
+    //Get api/scryfall/search?q=...&page=
     async search(req, res, next) {
         try {
             const { q, page=1 } = req.query;
@@ -14,5 +14,30 @@ const scryfallController = {
                 card: result.data.map(card => ({
                     id: card.id,
                     mana_cost: card.mana_cost,
-                    
-            }
+                    type_line: card.type_line,
+                    oracle_text: card.oracle_text,
+                    set_name: card.set_name,
+                    rarity: card.rarity,
+                    image: card.image_uris?.normal || card.card_faces?.[0]?.image_uris?.normal,
+                    image_small: card.image_uris?.small || card.card_faces?.[0]?.image_uris?.small,
+                    prices: card.prices,
+                    legalities: card.legalities,
+                    artist: card.artist,
+                    colors: card.colors,
+                    cmc: card.cmc,
+                    power: card.power,
+                    toughness: card.toughness,
+                     scryfall_uri: card.scryfall_uri
+          }))
+        });
+    } catch (error){
+        if (error.response?.status === 404) {
+            return res.json({ success: true, total_cards: 0, has_more: false, cards: []});
+        }
+        next(error);
+    }
+    },
+
+    //
+
+}
