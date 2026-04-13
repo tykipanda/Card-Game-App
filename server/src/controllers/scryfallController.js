@@ -53,7 +53,7 @@ const scryfallController = {
         }
     },
 
-    //GET /api/scryfall/ramdom?q=...
+    //GET /api/scryfall/random?q=...
     async getRamdom (req, res, next) {
         try {
             const { q } = req.query;
@@ -62,5 +62,17 @@ const scryfallController = {
         } catch (error) { next(error); }
     },
     
-
+    // GET /api/scryfall/card/:id
+    async getById(req, res, next) {
+        try {
+            const card = await scryfallService.getCardById(req.params.id);
+            res.json({ success: true, card });
+        } catch (error) {
+            if (error.response?.status === 404) {
+                return res.status (404).json ({ error: 'Carta no encontrada'});
+            }
+            next (error);
+        }
+    },
+    
 }
