@@ -53,6 +53,14 @@ const scryfallController = {
         }
     },
 
-    //GET /api
+    //GET /api/scryfall/ramdom?q=...
+    async getRamdom (req, res, next) {
+        try {
+            const { q } = req.query;
+            const card = await scryfallService.getRandomCard( q || null);
+            res.json({success: true,card });
+        } catch (error) { next(error); }
+    },
+    
 
 }
