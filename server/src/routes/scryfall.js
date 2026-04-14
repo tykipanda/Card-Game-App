@@ -9,3 +9,4 @@ router.get('/card/:id', ctrl.getById);
 router.get('/autocomplete', ctrl.autocomplete);
 router.get('/sets', ctrl.getSets);
 
+module.exports = router;
