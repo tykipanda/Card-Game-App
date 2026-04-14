@@ -74,5 +74,19 @@ const scryfallController = {
             next (error);
         }
     },
-    
-}
+
+    // GET /api/scryfall/autocomplete?q=...
+    async autocomplete (req, res, next) {
+        try {
+            const { q } = req.query;
+            if (!q) return res.status(400).json ({ error: 'Se requiere parámetro q'});
+            const result = await scryfallService.autocomplete(q);
+            res.json({ success: true, suggestions: result.data });
+        } catch (error) { next (error); }
+        },
+
+
+
+    }
+
+
