@@ -85,8 +85,25 @@ const scryfallController = {
         } catch (error) { next (error); }
         },
 
-
-
+    // GET /api/scryfall/sets
+    async getSets(req, res, next) {
+      try { 
+        const result = await scryfallService.getSets();
+        res.json({
+          success: true,
+          sets: result.data.map(s => ({
+            code: s.code, name: s.name,
+            released_at: s.released_at,
+            set_type: s.set_type,
+            card_count: s.card_count,
+            icon_svg_uri: s.icon_svg_uri
+          }))
+        });
+      } catch (error) { next(error); }
     }
+};
+
+
+
 
 
