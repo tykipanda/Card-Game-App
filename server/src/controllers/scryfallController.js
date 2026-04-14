@@ -103,6 +103,7 @@ const scryfallController = {
     }
 };
 
+module.exports = scryfallController;
 
 
 
