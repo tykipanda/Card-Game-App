@@ -19,7 +19,16 @@ export function useCards() {
         finally { setLoading(false); }
     }, []);
 
+    const drawCard = useCallback ( async ( count = 1 ) => {
+        if (!deckId) return;
+        setLoading(true); setError(null);
+        try {
+        const { data } = await cardAPI.drawCards(deckId, count);
+        setHand(prev => [...prev, ...data.cards]);
+        setRemaining(data.remaining);
+        } catch (err) { setError('Error al repartir cartas'); }
+        finally { setLoading(false); }
+        }, [deckId]);
 
-
-
-    
+        
+    };   
