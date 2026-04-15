@@ -12,3 +12,4 @@ export const cardAPI = {
     addToPile: (deckId, pileName, cards) => api.post('/pile', {deckId, pileName, cards }),
 };
 
+export default api; 
