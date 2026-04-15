@@ -8,4 +8,18 @@ export function useCards() {
     const [loading, setLoading] = useState (false);
     const [error, setError] = useState (null);
 
-}
+    const startNewGame = useCallback( async () => {
+        setLoading(true); setError(null);
+        try {
+            const { data } = await cardAPI.newGame();
+            setDeckId(data.deckId);
+            setRemaining(data.remaining);
+            setHand([]);
+        } catch (err) { setError('Error al crear mazo'); }
+        finally { setLoading(false); }
+    }, []);
+
+
+
+
+    
