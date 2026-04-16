@@ -30,5 +30,15 @@ export function useCards() {
         finally { setLoading(false); }
         }, [deckId]);
 
-        
-    };   
+        const shuffle = useCallback (async () => {
+            if (!deackId) return;
+            setLoading(true);
+            try {
+                const { data } = await cardAPI.shuffleDeck(deckId);
+                setRemaining(data.remaining);
+                setHand([]);
+            } catch (err) { setError('Error al barajar'); }
+            finally { setLoading(false); }
+            }, [deckId]);
+        }
+       
