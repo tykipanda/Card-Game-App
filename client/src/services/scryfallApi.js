@@ -15,8 +15,8 @@ export const scryfallAPI = {
     getRandom: (query = null ) =>
         scryfallApi.get('/random', { params: query ? { q: query} : {} }),
 
-    
-
+    getById: (id) =>
+        scryfallApi.get ('/card/${id}'),
 
 
 };
