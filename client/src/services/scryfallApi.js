@@ -5,3 +5,9 @@ const scryfallApi = axios.create({
     headers: { ' Content-Type': 'application/json' }
 });
 
+export const scryfallAPI = {
+    search: (query, page = 1) =>
+        scryfallApi.get('/search',{ params: { q: query, page} }),
+
+
+};   
