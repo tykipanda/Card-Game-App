@@ -9,5 +9,7 @@ export const scryfallAPI = {
     search: (query, page = 1) =>
         scryfallApi.get('/search',{ params: { q: query, page} }),
 
+    getByName: (name, fuzzy = false) =>
+        scryfallApi.get ('/named', { params: { name, fuzzy } }),
 
-};   
+};
