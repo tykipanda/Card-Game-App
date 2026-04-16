@@ -12,4 +12,11 @@ export const scryfallAPI = {
     getByName: (name, fuzzy = false) =>
         scryfallApi.get ('/named', { params: { name, fuzzy } }),
 
+    getRandom: (query = null ) =>
+        scryfallApi.get('/random', { params: query ? { q: query} : {} }),
+
+    
+
+
+
 };
