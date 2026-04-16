@@ -42,5 +42,8 @@ export function useCards() {
         }, [deckId]);
 
     const clearhand = useCallback(() => setHand([]), []);
-        }
+
+    return { deckId, hand, remaining, loading, error, startNewGame, drawCard, shuffle, clearhand };
+}
        
+    
