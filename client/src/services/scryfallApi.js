@@ -21,7 +21,6 @@ export const scryfallAPI = {
     autocomplete: (query) =>
         scryfallApi.get('/autocomplete', {params: { q: query} }),
 
-    
-
-
+    getSets: () =>
+        scryfallApi.get('/sets')
 };
