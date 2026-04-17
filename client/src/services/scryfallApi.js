@@ -24,3 +24,5 @@ export const scryfallAPI = {
     getSets: () =>
         scryfallApi.get('/sets')
 };
+
+export default scryfallApi;
