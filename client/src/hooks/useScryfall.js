@@ -8,4 +8,7 @@ export function useScryfall() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [totalCards, setTotalCards] = useState(0);
+    const [hasMore, setHasMore] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [currentQuery, setCurrentQuery] = useState('');
 }
