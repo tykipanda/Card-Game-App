@@ -18,5 +18,10 @@ export const scryfallAPI = {
     getById: (id) =>
         scryfallApi.get ('/card/${id}'),
 
+    autocomplete: (query) =>
+        scryfallApi.get('/autocomplete', {params: { q: query} }),
+
+    
+
 
 };
