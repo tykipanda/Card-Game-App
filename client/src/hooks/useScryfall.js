@@ -12,12 +12,14 @@ export function useScryfall() {
     const [currentPage, setCurrentPage] = useState(1);
     const [currentQuery, setCurrentQuery] = useState('');
 
-    const searchCard = useCallback (async (query, page = 1) =>{
+    const searchCards = useCallback (async (query, page = 1) =>{
         setLoading (true); setError(null);
     try {
         const { data } = await scryfallAPI.search(query, page);
         setCards(data.cards);
+        setTotalCards (data.total_cards);
         
+
     } }
     )
 }
