@@ -21,10 +21,9 @@ export function useScryfall() {
         setHasMore(data.has_more);
         setCurrentPage(page);
         setCurrentQuery(query);
-        
-
-
-
+    } catch (err){
+        setError('Error al buscar cartas');
+        setCards([]);
     } }
     )
 }
