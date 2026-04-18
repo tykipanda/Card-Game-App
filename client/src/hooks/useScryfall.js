@@ -20,6 +20,8 @@ export function useScryfall() {
         setTotalCards (data.total_cards);
         setHasMore(data.has_more);
         setCurrentPage(page);
+        setCurrentQuery(query);
+        
 
 
 
