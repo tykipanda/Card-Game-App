@@ -27,5 +27,13 @@ export function useScryfall() {
     } finally { setLoading(false); }
 }, []);
 
+const loadMore = useCallback(async () => {
+    if (!hasMore || loading) return;
+    setLoading(true);
+    try {
+        
+    }
+})
 
-}
+
+};
