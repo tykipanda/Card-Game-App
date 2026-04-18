@@ -24,6 +24,8 @@ export function useScryfall() {
     } catch (err){
         setError('Error al buscar cartas');
         setCards([]);
-    } }
-    )
+    } finally { setLoading(false); }
+}, []);
+
+
 }
