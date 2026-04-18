@@ -18,7 +18,9 @@ export function useScryfall() {
         const { data } = await scryfallAPI.search(query, page);
         setCards(data.cards);
         setTotalCards (data.total_cards);
+        setHasMore(data.has_more);
         
+
 
     } }
     )
