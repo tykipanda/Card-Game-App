@@ -46,5 +46,7 @@ const fetchRandom = useCallback(async (query = null) => {
     try {
         const { data } = await scryfallAPI.getRandom(query);
         setRandomCard( data.card);
-    }
-})
+    } catch (err) { setError(' Error al optener cartas aleatorias'); }
+    finally { setLoading(false); }
+}, []);
+
