@@ -53,7 +53,11 @@ const fetchRandom = useCallback(async (query = null) => {
 const fetchAutocomplete = useCallback (async, (query) =>{
     if (query.legth < 2) { setSuggestions([]); return; }
     try {
-        
-    }
-})
+        const { data } = await scryfallAPI.autocomplete(query);
+        setSuggestions(data.suggestions);
+    } catch (err) { setSuggestions([]); }
+    }, []);
+
+};
+
 
