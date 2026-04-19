@@ -33,7 +33,9 @@ const loadMore = useCallback(async () => {
     try {
         const { data } = await scryfallAPI.search(
             currenyQuery, currentPage + 1 );
-        )
+        );
+        setCards(prev => [...prev, ...data.cards]);
+        setHasMore(data.has_more);
     }
 })
 
