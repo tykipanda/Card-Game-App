@@ -43,5 +43,8 @@ const loadMore = useCallback(async () => {
     
 const fetchRandom = useCallback(async (query = null) => {
     setLoading(true); setError(null);
-    try {}
+    try {
+        const { data } = await scryfallAPI.getRandom(query);
+        setRandomCard( data.card);
+    }
 })
