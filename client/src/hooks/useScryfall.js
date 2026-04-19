@@ -38,10 +38,5 @@ const loadMore = useCallback(async () => {
         setHasMore(data.has_more);
         setCurrentPage(prev => prev + 1);
     } catch (err) { setError ( 'Error al cargar más'); }
+    finally { setLoading(false); }
     
-
-    }
-})
-
-
-};
