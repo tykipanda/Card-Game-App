@@ -50,3 +50,10 @@ const fetchRandom = useCallback(async (query = null) => {
     finally { setLoading(false); }
 }, []);
 
+const fetchAutocomplete = useCallback (async, (query) =>{
+    if (query.legth < 2) { setSuggestions([]); return; }
+    try {
+        
+    }
+})
+
