@@ -32,11 +32,16 @@ const loadMore = useCallback(async () => {
     setLoading(true);
     try {
         const { data } = await scryfallAPI.search(
-            currenyQuery, currentPage + 1 );
+            currenyQuery, currentPage + 1
         );
         setCards(prev => [...prev, ...data.cards]);
         setHasMore(data.has_more);
         setCurrentPage(prev => prev + 1);
     } catch (err) { setError ( 'Error al cargar más'); }
     finally { setLoading(false); }
+}, [hasMore, loading, currentQuery, currentPage]);
     
+const fetchRandom = useCallback(async (query = null) => {
+    setLoading(true); setError(null);
+    try {}
+})
