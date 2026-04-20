@@ -58,12 +58,17 @@ const fetchAutocomplete = useCallback (async, (query) =>{
     } catch (err) { setSuggestions([]); }
     }, []);
 
-};
-
 const clearResults = useCallback(() => {
     setCards([]); setTotalCards(0);
     setHasMore(false); setError(null);
 }, []);
 
+return {
+    cards, randomCard, suggestionsm,
+    loading, error, totalCards, hasMorem,
+    searchCards, loadMore, fetchRandom,
+    fetchAutocomplete, clearResults
+};
 
+}
 
