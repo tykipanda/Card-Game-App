@@ -34,6 +34,11 @@ export default function MtgCard({ card, compact = false }) {
                 boxShadow: '0 8px 24px  rgba(0,0,0,0.4)'
             }}
             />
+            <div style={{ flex: 1, color: '#ccc'}}>
+                <h2 style={{margin: '0 0 8px', color: '#fff'}}>
+                    {card.name}
+                </h2>
+            </div>
         </div>
     )
 
