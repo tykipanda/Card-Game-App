@@ -38,6 +38,10 @@ export default function MtgCard({ card, compact = false }) {
                 <h2 style={{margin: '0 0 8px', color: '#fff'}}>
                     {card.name}
                 </h2>
+                <p style={{color: '#888', margin: '0 0 4px' }}>
+                    {card.mana_cost} • {card.type_line}
+                </p>
+                
             </div>
         </div>
     )
