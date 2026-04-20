@@ -11,9 +11,14 @@ export default function MtgCard({ card, compact = false }) {
                 transition: 'transform 0.2s ease',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
             }}>
-                
+                <img
+                src={card,image || card.image_small}
+                alt={card.name}
+                style={{ width: '100%', display: 'block' }}
+                />
             </div>
-        )
+        );
     }
 
+    
 }
