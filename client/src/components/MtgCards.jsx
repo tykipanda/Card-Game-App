@@ -20,5 +20,14 @@ export default function MtgCard({ card, compact = false }) {
         );
     }
 
-    
+    return (
+        <div style={{
+            display: 'flex', gap: '24px',
+            background: '#1e1e2e', borderRadius: '16px',
+            padding: '24px', maxWidth: '700px'
+        }}>
+            
+        </div>
+    )
+
 }
