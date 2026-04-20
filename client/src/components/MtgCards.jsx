@@ -26,7 +26,14 @@ export default function MtgCard({ card, compact = false }) {
             background: '#1e1e2e', borderRadius: '16px',
             padding: '24px', maxWidth: '700px'
         }}>
-            
+            <img
+            src={card.image_uris?.normal || card.image}
+            alt={card.name}
+            style={{
+                width: '250px', borderRadius: '12px',
+                boxShadow: '0 8px 24px  rgba(0,0,0,0.4)'
+            }}
+            />
         </div>
     )
 
