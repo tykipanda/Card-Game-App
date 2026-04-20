@@ -60,4 +60,10 @@ const fetchAutocomplete = useCallback (async, (query) =>{
 
 };
 
+const clearResults = useCallback(() => {
+    setCards([]); setTotalCards(0);
+    setHasMore(false); setError(null);
+}, []);
+
+
 
