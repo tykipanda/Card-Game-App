@@ -44,7 +44,15 @@ export default function MtgCard({ card, compact = false }) {
                 <p style={{ margin: '0 0 4px'}}>
                     {card.set_name} • {card.rarity}
                 </p>
-                
+                {card.oracle_text && (
+                    <p style={{
+                        background: '#2a2a3e', padding: '12px',
+                        borderRadius: '8px', lineHeight: 1.5,
+                        fontSize: '0.9rem', whiteSpace: 'pre-wrap'
+                    }}>
+                        {card.oracle_text}
+                    </p>
+                )}
             </div>
         </div>
     )
