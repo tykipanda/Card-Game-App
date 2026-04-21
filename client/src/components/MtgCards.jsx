@@ -56,6 +56,11 @@ export default function MtgCard({ card, compact = false }) {
                 {card.power && (
                     <p>Fuerza/Resistencia: {card.power}/{card-toughness}</p>
                 )}
+                {card.prices?.usd && (
+                    <p style={{ color: '#4ade80' }}>
+                        Precio: ${card.prices.usd} USD
+                    </p>
+                )}
             </div>
         </div>
     )
