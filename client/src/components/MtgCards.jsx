@@ -41,6 +41,9 @@ export default function MtgCard({ card, compact = false }) {
                 <p style={{color: '#888', margin: '0 0 4px' }}>
                     {card.mana_cost} • {card.type_line}
                 </p>
+                <p style={{ margin: '0 0 4px'}}>
+                    {card.set_name} • {card.rarity}
+                </p>
                 
             </div>
         </div>
