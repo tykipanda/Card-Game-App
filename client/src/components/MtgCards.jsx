@@ -61,8 +61,10 @@ export default function MtgCard({ card, compact = false }) {
                         Precio: ${card.prices.usd} USD
                     </p>
                 )}
+                <p style={{ fontSize: '0.8rem', color: '#666' }}>
+                    Artista: {card.artist}
+                </p>
             </div>
         </div>
-    )
-
+    );
 }
