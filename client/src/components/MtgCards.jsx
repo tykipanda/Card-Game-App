@@ -53,6 +53,9 @@ export default function MtgCard({ card, compact = false }) {
                         {card.oracle_text}
                     </p>
                 )}
+                {card.power && (
+                    <p>Fuerza/Resistencia: {card.power}/{card-toughness}</p>
+                )}
             </div>
         </div>
     )
