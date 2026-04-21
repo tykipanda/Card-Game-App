@@ -9,5 +9,17 @@ export default function MtgSearch() {
         searchCards, loadMore, fetchAutocomplete, 
         suggestions, clearResults
     } = useScryfall();
-    
+    const [showSuggestions, setShowSuggestions] = useState(false);
+    const debounceRef = useRef(null);
+
+    // Autocompletar con debounce
+    useEffect(() => {
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+        debounceRef.current = setTimeout(() => {
+            if (query, length) >= 2 ) {
+                
+            }
+        })
+    })
+
 ;}
