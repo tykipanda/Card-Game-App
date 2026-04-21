@@ -16,10 +16,14 @@ export default function MtgSearch() {
     useEffect(() => {
         if (debounceRef.current) clearTimeout(debounceRef.current);
         debounceRef.current = setTimeout(() => {
-            if (query, length) >= 2 ) {
-                
+            if (query, length >= 2 ) {
+                fetchAutocomplete(query);
+                setShowSuggestions(true);
+            } else {
+                setShowSuggestions(false);
             }
-        })
-    })
+        }, 300);
+        return () => clearTimeout(debounceRef.current);
+    }, [query, fetchAutocomplete]);
 
-;}
+}
