@@ -3,3 +3,8 @@ import GameBoard from './components/GameBoard';
 import MtgSearch from './components/MtgSearch';
 import MtgRandomCard from "./components/MtgRandomCard";
 
+function App() {
+    const [activeTab, setActiveTab] = useState ('deck');
+
+    
+}
