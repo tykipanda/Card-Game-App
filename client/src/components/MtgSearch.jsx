@@ -26,4 +26,14 @@ export default function MtgSearch() {
         return () => clearTimeout(debounceRef.current);
     }, [query, fetchAutocomplete]);
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (query.trim()) {
+            searchCards(query);
+            setShowSuggestions(false);
+        }
+    };
+
+    
+
 }
