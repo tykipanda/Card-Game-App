@@ -36,8 +36,10 @@ export default function MtgRandomCard() {
             </div>
 
             {randomCard && (
-                <div style={{ display: 'flex', justifyContent: 'center'}}
+                <div style={{ display: 'flex', justifyContent: 'center'}}>
+                    <MtgCard card={randomCard} />
+                </div>
             )}
         </div>
-    )
+    );
 }
