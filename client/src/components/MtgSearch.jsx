@@ -93,6 +93,14 @@ export default function MtgSearch() {
                 )}
             </form>
 
+            {error && <p style={{ color: '#ef4444', textAlign: 'center'}}>{error}</p>}
+            {totalCards > 0 &&(
+                <p style={{ textAlign: 'center', color: '#888'}}>
+                    {totalCards} cartas encontradas
+                </p>
+            )}
+
+            {/* Grid de resultados */}
             
         </div>
     )
