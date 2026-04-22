@@ -101,6 +101,15 @@ export default function MtgSearch() {
             )}
 
             {/* Grid de resultados */}
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                gap: '16px', justifyItems: 'center'
+            }}>
+                {cards.map(card =>(
+                <MtgCard key={card.id} card={card} compact />
+                ))}
+            </div>
             
         </div>
     )
