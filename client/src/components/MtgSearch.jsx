@@ -61,8 +61,17 @@ export default function MtgSearch() {
                 background: '#1e1e2e', color: '#fff', fontSize: '1rem'
             }}
             />
+            <button type="submit" disabled={loading}
+            style={{
+                padding: '12px 24px', borderRadius: '8px',
+                background: '#7c3aed', color: '#fff',
+                border: 'none', cursor: 'pointer', fontWeight: 600
+            }}>
+                Buscar
+            </button>
             </div>
-                <}
+
+                
             </form>
         </div>
     )
