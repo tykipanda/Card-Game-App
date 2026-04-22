@@ -50,7 +50,17 @@ export default function MtgSearch() {
             <form onSubmit={handleSearch}
             style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 24px' }}>
             <div style={{ display: 'flex', gap: '8px' }}>
-
+            <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder='Ej: "Lightning bolt", "t:creature c:red"'
+            style={{
+                flex: 1, padding: '12px 16px',
+                borderRadius: '8px', border: '1px solid #444',
+                background: '#1e1e2e', color: '#fff', fontSize: '1rem'
+            }}
+            />
             </div>
                 <}
             </form>
