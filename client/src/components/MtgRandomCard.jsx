@@ -25,8 +25,19 @@ export default function MtgRandomCard() {
                 border: 'none', cursor: 'pointer' }}>
             Comandante Aletorio
             </button>
-            
-                </div>
+            <button onClick={() => fetchRandom ('r:mythic')}
+            disabled={loading}
+            style={{
+                padding: '10px 24px', borderRadius: '8px',
+                background: '#eab308', color: '#000',
+                border: 'none', cursor: 'pointer' }}>
+            Mítica Aleatoria
+            </button>
+            </div>
+
+            {randomCard && (
+                <div style={{ display: 'flex', justifyContent: 'center'}}
+            )}
         </div>
     )
 }
