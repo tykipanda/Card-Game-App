@@ -40,5 +40,15 @@ export default function MtgSearch() {
         setShowSuggestions(false);
     };
 
-    
+    return (
+        <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', color: '#fff'}}>
+                Buscar Cartas de Magic
+            </h2>
+
+            
+        </div>
+    )
+
+
 }
