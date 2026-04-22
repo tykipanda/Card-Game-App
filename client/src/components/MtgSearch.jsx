@@ -34,6 +34,11 @@ export default function MtgSearch() {
         }
     };
 
-    
+    const handleSuggestionClick = (name) => {
+        setQuery (name);
+        searchCards(name);
+        setShowSuggestions(false);
+    };
 
+    
 }
