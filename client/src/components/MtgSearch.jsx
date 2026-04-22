@@ -110,9 +110,19 @@ export default function MtgSearch() {
                 <MtgCard key={card.id} card={card} compact />
                 ))}
             </div>
-            
+
+            {hasMore && (
+                <div style={{ textAlign: 'center', marginTop: '24px' }}>
+                    <button onClick={loadMore} disabled={loading}
+                    style={{
+                        padding: '12px 32px', borderRadius: '8px',
+                        background: '#374151', color: '#fff',
+                        border: 'none', cursor: 'pointer'
+                    }}>
+                        {loading ? 'Cargando...' : 'Cargar más'}
+                    </button>
+                </div>
+            )}
         </div>
-    )
-
-
+    );
 }
