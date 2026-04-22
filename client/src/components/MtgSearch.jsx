@@ -79,10 +79,21 @@ export default function MtgSearch() {
                         listStyle: 'none', margin: 0, padding: 0,
                         zIndex: 10, maxHeight: '240px', overflowY: 'auto'
                     }}>
-                        
+                        {suggestions.map((name, i) => (
+                            <li key={i}
+                            onClick={() => handleSuggestionClick(name)}
+                            style={{
+                                padding: '10px 16px', cursor: 'pointer',
+                                borderBottom: '1px solid #333', color: '#ccc'
+                            }}>
+                                {name}
+                            </li>
+                        ))}
                     </ul>
                 )}
             </form>
+
+            
         </div>
     )
 
