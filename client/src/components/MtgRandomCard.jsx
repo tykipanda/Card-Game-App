@@ -10,7 +10,14 @@ export default function MtgRandomCard() {
             <h2 style={{ color: '#fff' }}>Carta Aleatoria</h2>
             <div  style={{ display: 'flex', gap: '12px',
                 justifyContent: 'center', marginBottom: '24px'}}>
-                    
+            <button onClick={() => fetchRandom()} disabled={loading}
+            style={{
+                padding: '10px 24px', borderRadius: '8px',
+                background: '#7c3aed', color: '#fff',
+                border: 'none', cursor: 'pointer'}}>
+            Cualquier Carta
+            </button>
+            
                 </div>
         </div>
     )
