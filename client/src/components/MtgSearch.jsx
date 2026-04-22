@@ -71,7 +71,17 @@ export default function MtgSearch() {
             </button>
             </div>
 
-                
+                {/* Sugerencias de autocompletado*/}
+                {showSuggestions && suggestions.length > 0 && (
+                    <ul style={{
+                        position:'absolute', top: '100%', left: 0, right: 0,
+                        background: '#2a2a3e', borderRadius: '0 0 8px 8px',
+                        listStyle: 'none', margin: 0, padding: 0,
+                        zIndex: 10, maxHeight: '240px', overflowY: 'auto'
+                    }}>
+                        
+                    </ul>
+                )}
             </form>
         </div>
     )
