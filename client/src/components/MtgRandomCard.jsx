@@ -17,6 +17,14 @@ export default function MtgRandomCard() {
                 border: 'none', cursor: 'pointer'}}>
             Cualquier Carta
             </button>
+            <button onClick={() => fetchRandom('is:commander')}
+            disabled={loading}
+            style={{
+                padding: '10px 24px', borderRadius: '8px',
+                background: '#ea580c', color: '#fff',
+                border: 'none', cursor: 'pointer' }}>
+            Comandante Aletorio
+            </button>
             
                 </div>
         </div>
