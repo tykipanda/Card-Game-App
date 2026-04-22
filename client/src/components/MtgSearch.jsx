@@ -46,7 +46,14 @@ export default function MtgSearch() {
                 Buscar Cartas de Magic
             </h2>
 
-            
+            {/*Barra de búsqueda */}
+            <form onSubmit={handleSearch}
+            style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 24px' }}>
+            <div style={{ display: 'flex', gap: '8px' }}>
+
+            </div>
+                <}
+            </form>
         </div>
     )
 
