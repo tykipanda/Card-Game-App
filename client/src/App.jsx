@@ -13,4 +13,13 @@ function App() {
         color: activeTab === tab ? '#fff' : '#666',
         borderBotton: activeTab === tab ? '3p solid #7c3aed' : 'none'
     });
+
+    return(
+        <div style={{
+            minHeight: '100vh', background: '#0d0d1a',
+            color: '#eee', fontFamily: "'Segoe UI', sans-serif"
+        }}>
+            
+        </div>
+    )
 }
