@@ -19,7 +19,13 @@ function App() {
             minHeight: '100vh', background: '#0d0d1a',
             color: '#eee', fontFamily: "'Segoe UI', sans-serif"
         }}>
-            
+            {/* Tab de navegación*/}
+            <div style={{
+                display: 'flex', justifyContent: 'center',
+                gap: '4px', padding: '20px 20px 0'
+            }}>
+                
+            </div>
         </div>
     )
 }
