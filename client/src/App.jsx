@@ -43,8 +43,10 @@ function App() {
                 background: '#1e1e2e', minHeight: 'calc(100vh - 80px)',
                 borderRadius: '0 0 16px 16px', margin: '0 20px 20px'
             }}>
-                
+                {activeTab === 'deck' && <GameBoard />}
+                {activeTab === 'search' && <MtgSearch />}
+                {activeTab === 'random' && <MtgRandomCard />}
             </div>
         </div>
-    )
+    );
 }
