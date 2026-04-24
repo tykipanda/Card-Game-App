@@ -37,6 +37,14 @@ function App() {
                     Carta Aleatoria
                 </button>
             </div>
+
+            {/* Contenido por tab*/}
+            <div style={{
+                background: '#1e1e2e', minHeight: 'calc(100vh - 80px)',
+                borderRadius: '0 0 16px 16px', margin: '0 20px 20px'
+            }}>
+                
+            </div>
         </div>
     )
 }
