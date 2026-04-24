@@ -6,5 +6,11 @@ import MtgRandomCard from "./components/MtgRandomCard";
 function App() {
     const [activeTab, setActiveTab] = useState ('deck');
 
-    
+    const tabStyle = (tab) => ({
+        padding: '12px 28px', fontSiez: '1rem', fontWeight: 600,
+        border: 'none', cursor: 'pointer', borderRadius: '8px 8px 0 0',
+        background: activeTab === tab ? '#1e1e2e' : '#0d0d1a',
+        color: activeTab === tab ? '#fff' : '#666',
+        borderBotton: activeTab === tab ? '3p solid #7c3aed' : 'none'
+    });
 }
