@@ -30,9 +30,12 @@ function App() {
                 </button>
                 <button onClick={() => setActiveTab('random')}
                 style={tabStyle('search')}>
-                    Buscar MYG
+                    Buscar MTG
                 </button>
-
+                <button onClick={() => setActiveTab('random')}
+                style={tabStyle('random')}>
+                    Carta Aleatoria
+                </button>
             </div>
         </div>
     )
