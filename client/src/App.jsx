@@ -24,7 +24,11 @@ function App() {
                 display: 'flex', justifyContent: 'center',
                 gap: '4px', padding: '20px 20px 0'
             }}>
-                
+                <button onClick={() => setActiveTab('deck')}
+                style={tabStyle('deck')}>
+                    Deck of Cards
+                </button>
+
             </div>
         </div>
     )
