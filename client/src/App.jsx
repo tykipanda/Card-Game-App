@@ -28,6 +28,10 @@ function App() {
                 style={tabStyle('deck')}>
                     Deck of Cards
                 </button>
+                <button onClick={() => setActiveTab('random')}
+                style={tabStyle('search')}>
+                    Buscar MYG
+                </button>
 
             </div>
         </div>
